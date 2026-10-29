@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "id": "gradient-step",
+  "title": "One gradient step",
+  "start": "question",
+  "nodes": [
+    {
+      "id": "question",
+      "kind": "question",
+      "title": "Choose the next point",
+      "video": "clips/question.mp4",
+      "transcript": "For f(x) = x², the gradient is 2x. Starting at x = 2 gives gradient 4. A gradient descent step subtracts the learning rate times the gradient: x_next = x − α × 2x.",
+      "prompt": "Start at x = 2 with learning rate α = 0.25. Where does one gradient descent step land?",
+      "choices": [
+        { "id": "one", "label": "x = 1", "target": "success" },
+        { "id": "three", "label": "x = 3", "target": "correction" }
+      ]
+    },
+    {
+      "id": "correction",
+      "kind": "explanation",
+      "title": "Check the direction",
+      "video": "clips/correction.mp4",
+      "transcript": "Adding 0.25 × 4 would move from x = 2 to x = 3, where the loss rises from 4 to 9. Gradient descent subtracts the positive gradient. Return to the question and try the downhill direction.",
+      "next": "question"
+    },
+    {
+      "id": "success",
+      "kind": "complete",
+      "title": "A step downhill",
+      "video": "clips/success.mp4",
+      "transcript": "The next point is 2 − 0.25 × 4 = 1. The loss decreases from f(2) = 4 to f(1) = 1. This illustrates one step on this particular function, not a convergence guarantee for arbitrary learning rates."
+    }
+  ]
+}

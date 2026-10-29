@@ -1,0 +1,138 @@
+:root {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #e8edf5;
+  background: #101a27;
+  line-height: 1.6;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: #94e5cc;
+  text-underline-offset: 0.25em;
+}
+header,
+footer {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.4rem 2rem;
+  color: #c0cada;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #334157;
+  flex-wrap: wrap;
+}
+header a {
+  color: #f4f7fc;
+  font-weight: 650;
+  text-decoration: none;
+}
+header span {
+  font-size: 0.9rem;
+}
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+.eyebrow {
+  color: #94e5cc;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+.intro > p:last-child {
+  color: #c0cada;
+  margin-bottom: 2rem;
+}
+.lesson {
+  background: #192638;
+  border: 1px solid #394a61;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #0b1220;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 1rem;
+}
+button {
+  border: 1px solid #94e5cc;
+  border-radius: 7px;
+  padding: 0.7rem 1.1rem;
+  background: #94e5cc;
+  color: #101a27;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  margin: 0.3rem 0.7rem 0.3rem 0;
+  min-height: 44px;
+}
+button:hover {
+  background: #b9f3e0;
+}
+button.secondary {
+  background: transparent;
+  color: #e8edf5;
+  border-color: #8194ad;
+  font-weight: 400;
+}
+:focus-visible {
+  outline: 3px solid #ffce82;
+  outline-offset: 4px;
+}
+details {
+  margin-top: 1rem;
+}
+summary {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.actions {
+  margin-top: 1.2rem;
+  border-top: 1px solid #394a61;
+  padding-top: 0.5rem;
+}
+h3 {
+  font-size: 1.05rem;
+}
+.muted,
+footer {
+  color: #c0cada;
+  font-size: 0.9rem;
+}
+footer {
+  text-align: center;
+}
+[role="status"]:empty {
+  display: none;
+}
+@media (max-width: 550px) {
+  main,
+  header,
+  footer {
+    padding: 1rem;
+  }
+  .lesson {
+    padding: 1rem;
+  }
+}

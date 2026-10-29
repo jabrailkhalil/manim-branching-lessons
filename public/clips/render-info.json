@@ -1,0 +1,32 @@
+{
+  "manim": "0.22.1",
+  "clips": [
+    {
+      "scene": "Question",
+      "frames": 105,
+      "fps": "15/1",
+      "width": 960,
+      "height": 540,
+      "codec": "h264",
+      "sha256": "c3af8979918a15a9b89bd1f020fabf5760b431b9255e51128af5cf4b7f5d3cfa"
+    },
+    {
+      "scene": "Correction",
+      "frames": 105,
+      "fps": "15/1",
+      "width": 960,
+      "height": 540,
+      "codec": "h264",
+      "sha256": "9da89f6ed468f1ba49f30446f215bfc50b54777600e3885eb2b450f4adf3ba84"
+    },
+    {
+      "scene": "Success",
+      "frames": 105,
+      "fps": "15/1",
+      "width": 960,
+      "height": 540,
+      "codec": "h264",
+      "sha256": "2a30f6176330c1bf53f34de79193ffeb94a4182e5d78ca721fe69e0e262d03cf"
+    }
+  ]
+}
