@@ -143,11 +143,16 @@ test("manifest text cannot insert HTML", async ({ page, request }) => {
   const response = await request.get("/lesson.json");
   const lesson = await response.json();
   lesson.nodes[0].title = '<img src=x onerror="window.injected=true">';
+  lesson.title = "A different lesson title";
   await page.route("**/lesson.json", (r) => r.fulfill({ json: lesson }));
   await page.goto("./");
   await expect(
     page.getByRole("heading", { name: lesson.nodes[0].title }),
   ).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    lesson.title,
+  );
+  await expect(page).toHaveTitle(`${lesson.title} · Branching lessons`);
   expect(await page.locator("#app img").count()).toBe(0);
   expect(await page.evaluate(() => Object.hasOwn(window, "injected"))).toBe(
     false,

@@ -23,6 +23,8 @@ async function boot(): Promise<void> {
   const response = await fetch("./lesson.json");
   if (!response.ok) throw new Error("The lesson manifest could not be loaded");
   const lesson = parseLesson(await response.json());
+  document.querySelector("h1")!.textContent = lesson.title;
+  document.title = `${lesson.title} · Branching lessons`;
   const key = await fingerprint(lesson);
   const storageKey = `branching-lesson:${lesson.id}`;
   let notice = "";
